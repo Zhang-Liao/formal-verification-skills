@@ -42,7 +42,6 @@ Framework-specific commands (currently Lean) handle the actual specification and
 
 ## Getting Started
 
-### Option 1: Quick Install (User Commands)
 
 ```bash
 npx fv-skills-baif
@@ -53,32 +52,6 @@ The installer prompts you to choose:
 2. **Location** — Global (all projects) or local (current project only)
 
 Verify with `/fvs:help` inside your chosen runtime.
-
-### Option 2: Plugin Install (Claude Code Only) ✨
-
-Install FVS as a Claude Code plugin to make it appear in the `/skills` list:
-
-```
-# In Claude Code, run:
-/plugin:add-local /path/to/fv-skills-baif
-```
-
-Or clone and install:
-```bash
-git clone https://github.com/formal-verification-skills/fv-skills-baif
-cd fv-skills-baif
-# Then in Claude Code:
-/plugin:add-local .
-```
-
-**Benefits:**
-- ✅ Appears in `/skills` list for easy discovery
-- ✅ Can be toggled on/off via settings
-- ✅ Better integration with Claude Code
-
-**Note:** Plugin format is Claude Code-only. For multi-platform support (OpenCode, Gemini), use Option 1.
-
-See [PLUGIN-INSTALLATION.md](PLUGIN-INSTALLATION.md) for detailed plugin setup instructions.
 
 ### Prerequisites (Lean 4 / Aeneas)
 
