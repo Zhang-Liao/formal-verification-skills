@@ -42,6 +42,8 @@ Framework-specific commands (currently Lean) handle the actual specification and
 
 ## Getting Started
 
+### Option 1: Quick Install (User Commands)
+
 ```bash
 npx fv-skills-baif
 ```
@@ -52,11 +54,43 @@ The installer prompts you to choose:
 
 Verify with `/fvs:help` inside your chosen runtime.
 
+### Option 2: Plugin Install (Claude Code Only) ✨
+
+Install FVS as a Claude Code plugin to make it appear in the `/skills` list:
+
+```
+# In Claude Code, run:
+/plugin:add-local /path/to/fv-skills-baif
+```
+
+Or clone and install:
+```bash
+git clone https://github.com/formal-verification-skills/fv-skills-baif
+cd fv-skills-baif
+# Then in Claude Code:
+/plugin:add-local .
+```
+
+**Benefits:**
+- ✅ Appears in `/skills` list for easy discovery
+- ✅ Can be toggled on/off via settings
+- ✅ Better integration with Claude Code
+
+**Note:** Plugin format is Claude Code-only. For multi-platform support (OpenCode, Gemini), use Option 1.
+
+See [PLUGIN-INSTALLATION.md](PLUGIN-INSTALLATION.md) for detailed plugin setup instructions.
+
 ### Prerequisites (Lean 4 / Aeneas)
 
 - A Lean 4 project with `lakefile.toml` and `lean-toolchain`
 - Aeneas-generated output (`Types.lean`, `Funs.lean`) from your Rust source
 - Lean 4 toolchain installed and working
+
+### Recommended: Lean LSP MCP Server
+
+For enhanced Lean 4 proof development with Claude Code, install the [lean-lsp-mcp](https://github.com/oOo0oOo/lean-lsp-mcp) server. It provides instant goal state checking, local lemma search, and proof diagnostics without rebuilding.
+
+**Note:** Avoid using the `lean_multi_attempt` tool for formal verification tasks - FV proof states often explode in size, making multi-attempt testing prohibitively slow.
 
 ### Staying Updated
 
