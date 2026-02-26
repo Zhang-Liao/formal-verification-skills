@@ -42,7 +42,6 @@ Framework-specific commands (currently Lean) handle the actual specification and
 
 ## Getting Started
 
-
 ```bash
 npx fv-skills-baif
 ```
