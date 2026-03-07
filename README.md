@@ -104,6 +104,7 @@ Use `--claude`, `--opencode`, `--gemini`, or `--all` to skip the runtime prompt.
 | `/fvs:map-code` | Build function dependency graph from extracted code and Rust source |
 | `/fvs:plan` | Pick next verification targets via greedy dependency graph traversal |
 | `/fvs:natural-language` | Generate natural language explanation of module or function with pre/post conditions |
+| `/fvs:weekly-summary` | Generate weekly progress report from git commits with AI-powered narrative summaries |
 | `/fvs:help` | Show available FVS commands and usage guide |
 | `/fvs:update` | Self-update to latest version via npx |
 
